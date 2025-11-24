@@ -13,6 +13,26 @@ Planar * make(size_t pl);
 void draw(Planar * pl);
 void free_planars(Planar ** pls, size_t k);
 
+Planar * make(size_t pl){
+  switch (pl){
+    default;
+      throw std::logic_error("bad id");
+  }
+  return nullptr;
+}
+
+void free_planars(Planar ** pls, size_t k){
+  for(size_t i = 0; i < k;++i){
+    delete pls[i];
+  }
+}
+
+void draw(Planar * pls){
+  std::cout << pl->x();
+  std::cout << " ";
+  std::cout << pl -> y() << "y";
+}
+
 int main()
 {
   Planar * pls[10] = {};
